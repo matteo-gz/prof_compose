@@ -1,0 +1,9 @@
+data/*
+data/logs/*
+data/storage/*
+!data/readme.md
+!data/storage
+!data/logs
+!data/storage/readme.md
+!data/logs/readme.md
+.idea

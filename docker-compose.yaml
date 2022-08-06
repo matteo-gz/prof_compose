@@ -1,0 +1,16 @@
+version: "3"
+services:
+  prof:
+    build:
+      context: ./serv/prof
+    volumes:
+      - ./data/storage:/go/src/storage:rw
+      - ./data/logs:/go/src/logs:rw
+    privileged: true
+    stdin_open: true
+    tty: true
+    command:
+      - prof
+      - -c=env.yaml
+    ports:
+      - "8201:8201"
